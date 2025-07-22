@@ -101,7 +101,7 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient-gold">Featured</span> Productions
+            <span className="text-gradient-primary">Featured</span> Productions
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of cinematic excellence from Falcon Eye Philms - each project represents 
@@ -126,7 +126,7 @@ const Projects = () => {
                 
                 {/* Play Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button className="rounded-full w-16 h-16 gradient-gold hover-glow">
+                  <Button className="rounded-full w-16 h-16 gradient-primary hover-glow">
                     <Play className="h-8 w-8 text-primary-foreground" />
                   </Button>
                 </div>
@@ -149,7 +149,7 @@ const Projects = () => {
               <div className="p-6 space-y-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-bold text-gradient-gold line-clamp-1">
+                    <h3 className="text-xl font-bold text-gradient-primary line-clamp-1">
                       {project.title}
                     </h3>
                     <span className="text-sm text-muted-foreground">{project.year}</span>
@@ -204,7 +204,7 @@ const Projects = () => {
         {/* View More Projects CTA */}
         <div className="text-center mt-12">
           <Button 
-            className="gradient-gold hover-glow text-lg px-8 py-4 h-auto font-semibold"
+            className="gradient-primary hover-glow text-lg px-8 py-4 h-auto font-semibold"
           >
             View Complete Filmography
           </Button>

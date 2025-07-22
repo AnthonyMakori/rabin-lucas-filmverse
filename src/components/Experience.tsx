@@ -55,12 +55,12 @@ const Experience = () => {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'milestone': return 'border-primary/50 shadow-gold';
-      case 'award': return 'border-accent/50 shadow-red';
-      case 'innovation': return 'border-primary/50 shadow-gold';
-      case 'founding': return 'border-accent/50 shadow-red';
-      case 'career': return 'border-primary/50 shadow-gold';
-      case 'breakthrough': return 'border-accent/50 shadow-red';
+      case 'milestone': return 'border-primary/50 shadow-primary';
+      case 'award': return 'border-accent/50 shadow-accent';
+      case 'innovation': return 'border-primary/50 shadow-primary';
+      case 'founding': return 'border-accent/50 shadow-accent';
+      case 'career': return 'border-primary/50 shadow-primary';
+      case 'breakthrough': return 'border-accent/50 shadow-accent';
       default: return 'border-border/50';
     }
   };
@@ -70,7 +70,7 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient-gold">Journey of</span> Excellence
+            <span className="text-gradient-primary">Journey of</span> Excellence
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A decade-long odyssey through the world of cinema, marked by creative breakthroughs, 
@@ -92,7 +92,7 @@ const Experience = () => {
               >
                 {/* Timeline Point */}
                 <div className="relative flex-shrink-0 md:order-2">
-                  <div className="w-16 h-16 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold">
+                  <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-primary">
                     <Calendar className="h-8 w-8 text-primary-foreground" />
                   </div>
                   <div className="absolute -top-2 -left-2 w-20 h-20 rounded-full border-2 border-primary/30 animate-pulse"></div>
@@ -106,7 +106,7 @@ const Experience = () => {
                       <Award className="h-5 w-5" />
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-gradient-gold">
+                    <h3 className="text-2xl font-bold text-gradient-primary">
                       {item.title}
                     </h3>
                     

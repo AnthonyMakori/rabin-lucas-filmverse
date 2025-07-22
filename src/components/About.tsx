@@ -17,7 +17,7 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold">
-                <span className="text-gradient-gold">Visionary</span> Filmmaker
+                <span className="text-gradient-primary">Visionary</span> Filmmaker
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 With over a decade of experience in the film industry, I've dedicated my career to bringing compelling stories to life through the lens of cinematic excellence.
@@ -44,7 +44,7 @@ const About = () => {
             </div>
 
             {/* Mission Statement */}
-            <Card className="p-6 gradient-cinematic border-primary/20 shadow-gold">
+            <Card className="p-6 gradient-cinematic border-primary/20 shadow-primary">
               <blockquote className="text-lg italic text-center">
                 <span className="text-primary text-2xl">"</span>
                 Cinema is the ultimate empathy machine. Every frame we capture has the power to change perspectives, 
@@ -65,7 +65,7 @@ const About = () => {
                   className="p-8 text-center hover-lift gradient-cinematic border-border/50 shadow-cinematic"
                 >
                   <Icon className={`h-12 w-12 mx-auto mb-4 ${stat.color}`} />
-                  <div className="text-3xl font-bold mb-2 text-gradient-gold">
+                  <div className="text-3xl font-bold mb-2 text-gradient-primary">
                     {stat.value}
                   </div>
                   <div className="text-muted-foreground font-medium">

@@ -25,11 +25,11 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto lg:mx-0">
           {/* Title */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-up">
-            <span className="text-gradient-gold">Crafting Visual</span>
+            <span className="text-gradient-primary">Crafting Visual</span>
             <br />
             <span className="text-foreground">Stories That</span>
             <br />
-            <span className="text-gradient-red">Inspire</span>
+            <span className="text-gradient-accent">Inspire</span>
           </h1>
 
           {/* Subtitle */}
@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-scale-in">
             <Button 
               onClick={scrollToProjects}
-              className="gradient-gold hover-glow text-lg px-8 py-4 h-auto font-semibold"
+              className="gradient-primary hover-glow text-lg px-8 py-4 h-auto font-semibold"
             >
               <Play className="mr-2 h-5 w-5" />
               Explore My Work

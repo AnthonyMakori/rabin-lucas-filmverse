@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Film } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,11 +43,11 @@ const Navigation = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center gap-3 hover-glow"
           >
-            <div className="w-10 h-10 rounded-full bg-gradient-gold flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full gradient-primary flex items-center justify-center">
               <Film className="h-6 w-6 text-primary-foreground" />
             </div>
             <div className="hidden md:block">
-              <div className="text-lg font-bold text-gradient-gold">Rabin Lucas</div>
+              <div className="text-lg font-bold text-gradient-primary">Rabin Lucas</div>
               <div className="text-xs text-muted-foreground">Film Producer</div>
             </div>
           </button>
@@ -64,23 +65,27 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Actions */}
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="gradient-gold hover-glow font-semibold"
+              className="gradient-primary hover-glow font-semibold"
             >
               Let's Collaborate
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-foreground hover:text-primary transition-colors"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="flex lg:hidden items-center gap-3">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -99,7 +104,7 @@ const Navigation = () => {
               <div className="px-6 pt-4">
                 <Button 
                   onClick={() => scrollToSection('contact')}
-                  className="w-full gradient-gold hover-glow font-semibold"
+                  className="w-full gradient-primary hover-glow font-semibold"
                 >
                   Let's Collaborate
                 </Button>
