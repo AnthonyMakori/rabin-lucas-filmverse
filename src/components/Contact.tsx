@@ -51,19 +51,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "rabin@falconeyePhilmz.com",
-      link: "mailto:rabin@falconeyePhilmz.com"
+      value: "rabinlucas0@gmail.com",
+      link: "rabinlucas0@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+254 729 923 951",
+      link: "tel:+254729923951"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Los Angeles, California",
+      value: "Nairobi, Kenya",
       link: null
     },
     {

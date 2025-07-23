@@ -19,7 +19,7 @@ const Projects = () => {
       awards: ["Best Cinematography", "Audience Choice Award"],
       status: "Festival Circuit",
       imdbLink: "#",
-      trailerLink: "#"
+      trailerLink: "/public/backv.mp4"
     },
     {
       id: 2,
@@ -27,12 +27,12 @@ const Projects = () => {
       genre: "Historical Drama",
       year: "2023",
       description: "The untold story of a composer during wartime, showcasing the power of music to transcend the darkest moments in human history.",
-      poster: "/src/assets/street.jpg",
+      poster: "/src/assets/street.jpeg",
       rating: 9.2,
       awards: ["Best Director", "Outstanding Achievement in Film"],
       status: "Streaming Now",
       imdbLink: "#",
-      trailerLink: "#"
+      trailerLink: "/public/backv.mp4"
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ const Projects = () => {
       awards: ["Best Sound Design"],
       status: "Post-Production",
       imdbLink: "#",
-      trailerLink: "#"
+      trailerLink: "/public/backv.mp4"
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ const Projects = () => {
       awards: ["Best Family Film", "Excellence in Youth Cinema"],
       status: "Available on Demand",
       imdbLink: "#",
-      trailerLink: "#"
+      trailerLink: "/public/backv.mp4"
     },
    {
       id: 5,
@@ -71,7 +71,7 @@ const Projects = () => {
       awards: ["Best International Feature"],
       status: "International Release",
       imdbLink: "https://www.falconeyephilmz.com/",
-      trailerLink: "/assets/trailers/backv.mp4" 
+      trailerLink: "/public/backv.mp4" 
     },
     {
       id: 6,
@@ -84,7 +84,7 @@ const Projects = () => {
       awards: ["Best Documentary Feature", "Social Impact Award"],
       status: "Educational Distribution",
       imdbLink: "#",
-      trailerLink: "#"
+      trailerLink: "/public/backv.mp4"
     }
   ];
 
