@@ -2,8 +2,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play, Film, Award, Users, Globe } from "lucide-react";
 import falconLogo from "@/assets/falcon-eye-logo.jpg";
+import ScriptSubmissionDialog from "./ScriptSubmissionDialog";
+import { useState } from "react";
 
 const FalconEye = () => {
+  const [isScriptDialogOpen, setIsScriptDialogOpen] = useState(false);
+  
   const companyStats = [
     { icon: Film, label: "Active Projects", value: "8" },
     { icon: Award, label: "Industry Awards", value: "25+" },
@@ -181,12 +185,19 @@ const FalconEye = () => {
             <Button 
               variant="outline" 
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold"
+              onClick={() => setIsScriptDialogOpen(true)}
             >
               Submit Your Script
             </Button>
           </div>
         </Card>
       </div>
+
+      {/* Script Submission Dialog */}
+      <ScriptSubmissionDialog
+        open={isScriptDialogOpen}
+        onOpenChange={setIsScriptDialogOpen}
+      />
     </section>
   );
 };
