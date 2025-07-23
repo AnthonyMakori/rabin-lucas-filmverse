@@ -96,10 +96,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Falcon Eye Philms & Social */}
+          {/* Falcon Eye Philmz & Social */}
           <div className="space-y-6">
             <div>
-              <h4 className="text-lg font-semibold text-foreground mb-4">Falcon Eye Philms</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-4">Falcon Eye Philmz</h4>
               <a 
                 href="https://www.falconeyePhilmz.com"
                 target="_blank"
@@ -136,7 +136,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Rabin Lucas & Falcon Eye Philms. All rights reserved.
+              © {currentYear} Rabin Lucas & Falcon Eye Philmz. All rights reserved.
             </p>
             
             <div className="flex gap-6 text-sm text-muted-foreground">

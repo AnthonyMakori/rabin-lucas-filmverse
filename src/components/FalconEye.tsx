@@ -37,7 +37,7 @@ const FalconEye = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient-gold">Falcon Eye</span> Philms
+            <span className="text-gradient-gold">Falcon Eye</span> Philmz
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Where visionary storytelling meets cinematic excellence. Explore our production house 
@@ -52,18 +52,18 @@ const FalconEye = () => {
               <div className="flex items-center gap-6 mb-6">
                 <img 
                   src={falconLogo} 
-                  alt="Falcon Eye Philms Logo" 
+                  alt="Falcon Eye Philmz Logo" 
                   className="w-24 h-24 object-cover rounded-lg border-2 border-primary/20"
                 />
                 <div>
-                  <h3 className="text-2xl font-bold text-gradient-gold">Falcon Eye Philms</h3>
+                  <h3 className="text-2xl font-bold text-gradient-gold">Falcon Eye Philmz</h3>
                   <p className="text-muted-foreground">Production Excellence Since 2018</p>
                 </div>
               </div>
               
               <p className="text-lg text-foreground leading-relaxed mb-6">
                 Founded with a mission to create compelling visual narratives that transcend cultural 
-                boundaries, Falcon Eye Philms has emerged as a leading independent production house 
+                boundaries, Falcon Eye Philmz has emerged as a leading independent production house 
                 specializing in premium content for global audiences.
               </p>
 
@@ -171,7 +171,7 @@ const FalconEye = () => {
             <span className="text-gradient-gold">Ready to Create</span> Something Amazing?
           </h3>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Falcon Eye Philms is always looking for passionate storytellers, talented creatives, 
+            Falcon Eye Philmz is always looking for passionate storytellers, talented creatives, 
             and visionary partners to collaborate on groundbreaking projects.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

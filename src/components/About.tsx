@@ -26,7 +26,7 @@ const About = () => {
 
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                As the CEO and founder of <span className="text-primary font-semibold">Falcon Eye Philms</span>, 
+                As the CEO and founder of <span className="text-primary font-semibold">Falcon Eye Philmz</span>, 
                 I've overseen the production of over 25 films, each one crafted with meticulous attention to detail 
                 and a passion for storytelling that resonates with audiences worldwide.
               </p>

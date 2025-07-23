@@ -5,7 +5,7 @@ const Experience = () => {
   const timeline = [
     {
       year: "2024",
-      title: "Falcon Eye Philms Expansion",
+      title: "Falcon Eye Philmz Expansion",
       location: "Global Operations",
       description: "Expanded production capabilities internationally, establishing partnerships across three continents and launching our premium content division.",
       achievement: "25+ Films Produced",
@@ -15,7 +15,7 @@ const Experience = () => {
       year: "2022",
       title: "Industry Recognition Peak",
       location: "Film Festivals Worldwide",
-      description: "Received multiple industry awards for excellence in cinematography and storytelling, establishing Falcon Eye Philms as a premier production house.",
+      description: "Received multiple industry awards for excellence in cinematography and storytelling, establishing Falcon Eye Philmz as a premier production house.",
       achievement: "12 Industry Awards",
       type: "award"
     },
@@ -29,9 +29,9 @@ const Experience = () => {
     },
     {
       year: "2018",
-      title: "Falcon Eye Philms Founded",
+      title: "Falcon Eye Philmz Founded",
       location: "Film Industry Hub",
-      description: "Established Falcon Eye Philms with a vision to create meaningful cinema that bridges cultural gaps and tells universal stories.",
+      description: "Established Falcon Eye Philmz with a vision to create meaningful cinema that bridges cultural gaps and tells universal stories.",
       achievement: "Company Launch",
       type: "founding"
     },

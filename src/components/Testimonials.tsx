@@ -45,7 +45,7 @@ const Testimonials = () => {
       role: "Film Critic",
       company: "Entertainment Weekly",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b789?w=100&h=100&fit=crop&crop=face",
-      quote: "Falcon Eye Philms consistently delivers content that challenges conventions while maintaining commercial appeal. Rabin's work represents the future of independent cinema.",
+      quote: "Falcon Eye Philmz consistently delivers content that challenges conventions while maintaining commercial appeal. Rabin's work represents the future of independent cinema.",
       rating: 5,
       project: "Echoes of Tomorrow"
     },
@@ -55,7 +55,7 @@ const Testimonials = () => {
       role: "Executive Producer",
       company: "StreamCorp Studios",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-      quote: "Rabin's ability to manage complex productions while maintaining creative integrity is unparalleled. Every project with Falcon Eye Philms exceeds expectations.",
+      quote: "Rabin's ability to manage complex productions while maintaining creative integrity is unparalleled. Every project with Falcon Eye Philmz exceeds expectations.",
       rating: 5,
       project: "Urban Legends"
     },
@@ -85,7 +85,7 @@ const Testimonials = () => {
       role: "Distribution Executive",
       company: "Global Cinema Network",
       image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face",
-      quote: "Falcon Eye Philms' content travels exceptionally well internationally. Rabin understands how to create universal stories that resonate across cultures.",
+      quote: "Falcon Eye Philmz' content travels exceptionally well internationally. Rabin understands how to create universal stories that resonate across cultures.",
       rating: 5,
       project: "Children of the Coast"
     }
@@ -102,7 +102,7 @@ const Testimonials = () => {
       name: formData.name,
       role: formData.role,
       company: formData.company,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face", // Default avatar
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face", 
       quote: formData.quote,
       rating: formData.rating,
       project: formData.project
@@ -144,7 +144,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Voices from the film industry - actors, critics, executives, and collaborators 
-            share their experiences working with Rabin Lucas and Falcon Eye Philms.
+            share their experiences working with Rabin Lucas and Falcon Eye Philmz.
           </p>
         </div>
 

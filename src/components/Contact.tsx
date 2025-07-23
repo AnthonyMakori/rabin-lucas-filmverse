@@ -82,7 +82,7 @@ const Contact = () => {
             <span className="text-gradient-gold">Let's Create</span> Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your vision to life? Contact Rabin Lucas and Falcon Eye Philms 
+            Ready to bring your vision to life? Contact Rabin Lucas and Falcon Eye Philmz 
             for collaboration opportunities, consultations, or project inquiries.
           </p>
         </div>
@@ -94,7 +94,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gradient-gold mb-6">Get In Touch</h3>
               <p className="text-lg text-foreground mb-8 leading-relaxed">
                 Whether you're looking to collaborate on a new project, need consultation on film production, 
-                or want to discuss partnership opportunities with Falcon Eye Philms, I'm here to help bring 
+                or want to discuss partnership opportunities with Falcon Eye Philmz, I'm here to help bring 
                 your creative vision to reality.
               </p>
 

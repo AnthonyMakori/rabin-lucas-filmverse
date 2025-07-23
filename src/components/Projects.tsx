@@ -108,7 +108,7 @@ const Projects = () => {
             <span className="text-gradient-primary">Featured</span> Productions
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of cinematic excellence from Falcon Eye Philms - each project represents 
+            A showcase of cinematic excellence from Falcon Eye Philmz - each project represents 
             our commitment to storytelling that entertains, inspires, and resonates with audiences worldwide.
           </p>
         </div>

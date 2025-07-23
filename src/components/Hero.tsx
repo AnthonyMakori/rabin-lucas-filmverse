@@ -34,7 +34,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in-delayed max-w-2xl">
-            Rabin Lucas - Film Producer & CEO of Falcon Eye Philms
+            Rabin Lucas - Film Producer & CEO of Falcon Eye Philmz
           </p>
 
           <p className="text-lg text-muted-foreground mb-8 animate-fade-in-delayed max-w-2xl">
