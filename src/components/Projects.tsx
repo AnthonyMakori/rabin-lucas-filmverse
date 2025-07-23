@@ -1,8 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Play, ExternalLink, Star } from "lucide-react";
+import { useState } from "react";
 
 const Projects = () => {
+  const [selectedTrailer, setSelectedTrailer] = useState<string | null>(null);
+
   const featuredProjects = [
     {
       id: 1,
@@ -180,18 +184,47 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2 pt-2">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <Play className="h-4 w-4 mr-2" />
-                    Trailer
-                  </Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                        onClick={() => setSelectedTrailer(project.trailerLink)}
+                        disabled={!project.trailerLink || project.trailerLink === "#"}
+                      >
+                        <Play className="h-4 w-4 mr-2" />
+                        Trailer
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl w-full">
+                      <DialogHeader>
+                        <DialogTitle>{project.title} - Trailer</DialogTitle>
+                      </DialogHeader>
+                      <div className="aspect-video w-full">
+                        {selectedTrailer && selectedTrailer !== "#" ? (
+                          <video 
+                            className="w-full h-full rounded-lg"
+                            controls
+                            autoPlay
+                            src={selectedTrailer}
+                          >
+                            Your browser does not support the video tag.
+                          </video>
+                        ) : (
+                          <div className="w-full h-full bg-muted rounded-lg flex items-center justify-center">
+                            <p className="text-muted-foreground">Trailer coming soon</p>
+                          </div>
+                        )}
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                   <Button 
                     variant="outline" 
                     size="sm" 
                     className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => window.open(project.imdbLink, '_blank')}
+                    disabled={!project.imdbLink || project.imdbLink === "#"}
                   >
                     <ExternalLink className="h-4 w-4" />
                   </Button>
