@@ -1,8 +1,34 @@
 import { Card } from "@/components/ui/card";
-import { Quote, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Quote, Star, Plus } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Testimonials = () => {
-  const testimonials = [
+  const { toast } = useToast();
+  const [showForm, setShowForm] = useState(false);
+  const [userTestimonials, setUserTestimonials] = useState<any[]>([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    role: "",
+    company: "",
+    quote: "",
+    project: "",
+    rating: 5
+  });
+
+  // Load user testimonials from localStorage on component mount
+  useEffect(() => {
+    const saved = localStorage.getItem('userTestimonials');
+    if (saved) {
+      setUserTestimonials(JSON.parse(saved));
+    }
+  }, []);
+
+  const defaultTestimonials = [
     {
       id: 1,
       name: "Michael Chen",
@@ -65,6 +91,50 @@ const Testimonials = () => {
     }
   ];
 
+  // Combine default testimonials with user testimonials
+  const allTestimonials = [...defaultTestimonials, ...userTestimonials];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const newTestimonial = {
+      id: Date.now(), // Simple ID generation
+      name: formData.name,
+      role: formData.role,
+      company: formData.company,
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face", // Default avatar
+      quote: formData.quote,
+      rating: formData.rating,
+      project: formData.project
+    };
+
+    const updatedUserTestimonials = [...userTestimonials, newTestimonial];
+    setUserTestimonials(updatedUserTestimonials);
+    
+    // Save to localStorage
+    localStorage.setItem('userTestimonials', JSON.stringify(updatedUserTestimonials));
+    
+    // Reset form
+    setFormData({
+      name: "",
+      role: "",
+      company: "",
+      quote: "",
+      project: "",
+      rating: 5
+    });
+    setShowForm(false);
+
+    toast({
+      title: "Thank you!",
+      description: "Your testimonial has been added successfully.",
+    });
+  };
+
+  const handleInputChange = (field: string, value: string | number) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
   return (
     <section id="testimonials" className="py-24 bg-gradient-to-br from-secondary/20 to-background">
       <div className="container mx-auto px-6">
@@ -78,8 +148,100 @@ const Testimonials = () => {
           </p>
         </div>
 
+        {/* Add Testimonial Button */}
+        <div className="text-center mb-12">
+          <Button 
+            onClick={() => setShowForm(!showForm)}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold hover:shadow-gold-lg transition-all duration-300"
+          >
+            <Plus className="h-4 w-4 mr-2" />
+            {showForm ? "Cancel" : "Add Your Testimonial"}
+          </Button>
+        </div>
+
+        {/* Testimonial Form */}
+        {showForm && (
+          <Card className="max-w-2xl mx-auto p-8 mb-12 gradient-cinematic border-primary/20 shadow-gold">
+            <h3 className="text-2xl font-bold text-gradient-gold mb-6">Share Your Experience</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="name">Name *</Label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => handleInputChange("name", e.target.value)}
+                    required
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="role">Role/Title *</Label>
+                  <Input
+                    id="role"
+                    value={formData.role}
+                    onChange={(e) => handleInputChange("role", e.target.value)}
+                    required
+                    className="mt-1"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="company">Company/Organization</Label>
+                  <Input
+                    id="company"
+                    value={formData.company}
+                    onChange={(e) => handleInputChange("company", e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="project">Project Worked On</Label>
+                  <Input
+                    id="project"
+                    value={formData.project}
+                    onChange={(e) => handleInputChange("project", e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+              </div>
+              <div>
+                <Label htmlFor="rating">Rating</Label>
+                <select
+                  value={formData.rating}
+                  onChange={(e) => handleInputChange("rating", parseInt(e.target.value))}
+                  className="mt-1 w-full px-3 py-2 bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+                >
+                  {[5, 4, 3, 2, 1].map(num => (
+                    <option key={num} value={num}>{num} Star{num !== 1 ? 's' : ''}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <Label htmlFor="quote">Your Testimonial *</Label>
+                <Textarea
+                  id="quote"
+                  value={formData.quote}
+                  onChange={(e) => handleInputChange("quote", e.target.value)}
+                  required
+                  rows={4}
+                  className="mt-1"
+                  placeholder="Share your experience working with Rabin or thoughts on his work..."
+                />
+              </div>
+              <Button 
+                type="submit" 
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold hover:shadow-gold-lg transition-all duration-300"
+              >
+                Submit Testimonial
+              </Button>
+            </form>
+          </Card>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {allTestimonials.map((testimonial, index) => (
             <Card 
               key={testimonial.id} 
               className={`p-8 hover-lift gradient-cinematic border-border/50 shadow-cinematic group relative overflow-hidden ${
