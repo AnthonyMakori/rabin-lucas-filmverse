@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Play, ExternalLink, Star } from "lucide-react";
 import { useState } from "react";
+import { fromTheme } from "tailwind-merge";
+import talia from "@/assets/talia.jpg";
+import street from "@/assets/street.jpeg";
+import crime from "@/assets/crime.jpg";
+import ngori from "@/assets/ngori.jpg";
+import grace from "@/assets/grace.jpg";
 
 const Projects = () => {
   const [selectedTrailer, setSelectedTrailer] = useState<string | null>(null);
@@ -14,7 +20,7 @@ const Projects = () => {
       genre: "Sci-Fi Drama",
       year: "2024",
       description: "A thought-provoking exploration of humanity's relationship with technology, set in a near-future world where memories can be digitally preserved.",
-      poster: "/src/assets/talia.jpg",
+      poster: talia,
       rating: 8.9,
       awards: ["Best Cinematography", "Audience Choice Award"],
       status: "Festival Circuit",
@@ -27,7 +33,7 @@ const Projects = () => {
       genre: "Historical Drama",
       year: "2023",
       description: "The untold story of a composer during wartime, showcasing the power of music to transcend the darkest moments in human history.",
-      poster: "/src/assets/street.jpeg",
+      poster: street,
       rating: 9.2,
       awards: ["Best Director", "Outstanding Achievement in Film"],
       status: "Streaming Now",
@@ -40,7 +46,7 @@ const Projects = () => {
       genre: "Thriller",
       year: "2023",
       description: "A gripping psychological thriller that blurs the line between reality and urban mythology in the heart of a bustling metropolis.",
-      poster: "/src/assets/crime.jpg",
+      poster: street,
       rating: 8.5,
       awards: ["Best Sound Design"],
       status: "Post-Production",
@@ -53,7 +59,7 @@ const Projects = () => {
       genre: "Family Adventure",
       year: "2022",
       description: "A heartwarming adventure following a group of children who discover an ancient treasure that teaches them about friendship and courage.",
-      poster: "/src/assets/ngori.jpg",
+      poster: ngori,
       rating: 8.7,
       awards: ["Best Family Film", "Excellence in Youth Cinema"],
       status: "Available on Demand",
@@ -66,7 +72,7 @@ const Projects = () => {
       genre: "Crime",
       year: "2022",
       description: "A passionate love story set against the exotic backdrop of Marrakech, exploring themes of cultural identity and forbidden love.",
-      poster: "/src/assets/crime.jpg", 
+      poster: crime, 
       rating: 8.3,
       awards: ["Best International Feature"],
       status: "International Release",
@@ -79,7 +85,7 @@ const Projects = () => {
       genre: "Documentary",
       year: "2021",
       description: "An eye-opening documentary examining the impact of technology on modern society and the growing digital inequality across communities.",
-      poster: "/src/assets/grace.jpg",
+      poster: grace,
       rating: 9.0,
       awards: ["Best Documentary Feature", "Social Impact Award"],
       status: "Educational Distribution",
